@@ -17,14 +17,15 @@ Usage
 2. 替换原始文件   
 ```mv vimrc ~/.vimrc```
 
-3. vim命令模式下执行   
-    * 安装插件:    
+3. vim命令模式下执行  
+     
+    * 安装插件      
     ```:BundleInstall```
 
-    * 更新插件:    
+    * 更新插件       
     ```:BundleInstall```
 
-    * 卸载不在列表的插件:    
+    * 卸载不在列表的插件    
     ```:BundleClean```   
 
 
