@@ -19,14 +19,14 @@ Usage
 
 3. vim命令模式下执行  
      
-    * 安装插件      
-    ```:BundleInstall```
+    * 安装插件       
+        ```:BundleInstall```
 
-    * 更新插件       
-    ```:BundleInstall```
+    * 更新插件    
+        ```:BundleInstall```
 
     * 卸载不在列表的插件    
-    ```:BundleClean```   
+        ```:BundleClean```
 
 
 
