@@ -1,12 +1,18 @@
 Vim Settings
 ==============
-vim配置文件 
+vim配置文件    
 使用Vundle进行插件管理
 
 Credits
 =======
 
-根据[beiyuu](http://beiyuu.com/git-vim-tutorial/)的插件修改，注释了相对行号
+根据[beiyuu](http://beiyuu.com/git-vim-tutorial/)的插件修改，保留了  
+ 
+* ```FencView.vim```    
+* ```AutoClose```    
+* ```_jsbeautiful```    
+* ```matchit.zip```    
+* ```YouComPleteMe```   
 
 Usage
 =====
@@ -26,4 +32,7 @@ Usage
         ```:PluginInstall```
 
     * 更新插件    
+        ```:PluginInstall```
+
+    * 卸载不在列表的插件    
         ```:PluginInstall```
