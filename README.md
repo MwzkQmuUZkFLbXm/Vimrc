@@ -32,7 +32,4 @@ Usage
         ```:PluginInstall```
 
     * 更新插件    
-        ```:PluginInstall```
-
-    * 卸载不在列表的插件    
-        ```:PluginInstall```
+        ```:PluginInstall```    
