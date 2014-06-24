@@ -11,22 +11,22 @@ Credits
 Usage
 =====
 
-1. 下载插件   
+1. Vundle的配置   
+```git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle```
+
+2. 下载插件   
 ```git clone git@github.com:kmlg/Vimrc.git```   
 
-2. 替换原始文件   
+3. 替换原始文件   
 ```mv vimrc ~/.vimrc```
 
-3. vim命令模式下执行  
+4. vim命令模式下执行  
      
     * 安装插件       
-        ```:BundleInstall```
+        ```:PluginInstall```
 
     * 更新插件    
-        ```:BundleInstall```
+        ```:PluginInstall```
 
     * 卸载不在列表的插件    
-        ```:BundleClean```
-
-
-
+        ```:PluginInstall```
