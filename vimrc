@@ -30,10 +30,12 @@ Plugin 'FencView.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 "在输入()，""等需要配对的符号时，自动帮你补全剩余半个
-Plugin 'AutoClose'
+"Plugin 'AutoClose'
+Plugin 'Auto-Pairs'
 
 "神级插件，ZenCoding可以让你以一种神奇而无比爽快的感觉写HTML、CSS
 Plugin 'ZenCoding.vim'
+
 
 "在()、""、甚至HTML标签之间快速跳转
 Plugin 'matchit.zip'
@@ -47,6 +49,12 @@ Plugin '_jsbeautify'
 "迄今位置最好的自动VIM自动补全插件了吧
 "Vundle的这个写法，是直接取该插件在Github上的repo
 Plugin 'Valloric/YouCompleteMe'
+
+"必不可少，在VIM的编辑窗口树状显示文件目录
+Plugin 'The-NERD-tree'
+
+"让代码更加易于纵向排版，以=或,符号对齐
+Plugin 'Tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,9 +73,9 @@ syntax on
 " Put your non-Plugin stuff after this line
 
 "tab setting {
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 """}"
@@ -82,7 +90,10 @@ set encoding=utf-8
 
 ""显示行号
 set number
+""自动换行
+set nowrap
 
+" Search settings {
 "设置大小写敏感和聪明感知(小写全搜，大写完全匹配)
 set ignorecase
 set smartcase
@@ -90,3 +101,21 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+"}
+
+"Color Settings {
+"set colorcolumn=85           "彩色显示第85行
+"set t_Co=256                 "设置256色显示
+"set background=dark          "使用color solarized
+"set cursorline               "设置光标高亮显示
+"set cursorcolumn             "光标垂直高亮
+"set ttyfast
+"set ruler
+"set backspace=indent,eol,start
+
+"}
+
+"光标大小设置 {
+"set guicursor=n-c-v:ver1-ncvCursor
+"set guicursor=i:block-iCursor-blinkon0,v:block-vCursor
+"}

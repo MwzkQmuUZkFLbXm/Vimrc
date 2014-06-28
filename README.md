@@ -9,7 +9,7 @@ Credits
 根据[beiyuu](http://beiyuu.com/git-vim-tutorial/)的插件修改，保留了  
  
 * ```FencView.vim```    
-* ```AutoClose```    
+* ```Auto-Pairs```    
 * ```_jsbeautiful```    
 * ```matchit.zip```    
 * ```YouComPleteMe```   
