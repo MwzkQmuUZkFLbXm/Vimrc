@@ -21,5 +21,5 @@ Usage
     * 更新插件    
         ```:PluginInstall```
         
-     * 卸载插件(先在.vimrc注释掉不用的插件，然后执行)  
+    * 卸载插件(先在.vimrc注释掉不用的插件，然后执行)  
         ```:PluginClean```
