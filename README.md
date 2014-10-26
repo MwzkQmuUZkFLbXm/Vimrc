@@ -16,7 +16,7 @@ Vim Settings
 #### vim命令模式下执行  
      
 * 安装插件或更新插件     
-```:PluginInstall```    
+<code>:PluginInstall</code>
 	
 * 卸载插件(先在.vimrc注释掉不用的插件，然后执行)    
-```:PluginClean```
+<code>:PluginClean</code>
