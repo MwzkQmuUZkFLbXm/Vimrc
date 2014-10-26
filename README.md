@@ -15,11 +15,8 @@ Usage
 
 4. vim命令模式下执行  
      
-    * 安装插件       
+    * 安装插件,更新插件        
         ```:PluginInstall```
 
-    * 更新插件    
-        ```:PluginInstall```
-        
     * 卸载插件(先在.vimrc注释掉不用的插件，然后执行)  
         ```:PluginClean```
