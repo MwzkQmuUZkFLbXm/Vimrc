@@ -4,7 +4,7 @@ Vim Settings
 
 #### Screebshot
 
-![mac_vim](screenshot/mac_vim.png?raw=true)
+<img src=http://i.imgur.com/cmtEal2.png width=890 height=500 alt="mac_vim">
 
 ---
 
