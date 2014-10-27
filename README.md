@@ -4,7 +4,7 @@ Vim Settings
 
 #### Screebshot
 
-![mac_vim](http://kmlg.tk/content/images/2014/Oct/mac_vim.png =894x505)
+![mac_vim](screenshot/mac_vim.png =894x505)
 
 ---
 
