@@ -2,6 +2,12 @@ Vim Settings
 
 ---
 
+#### Screebshot
+
+![mac_vim](http://kmlg.tk/content/images/2014/Oct/mac_vim.png =894x505)
+
+---
+
 #### 配置
 
 1. Vundle的配置   
@@ -12,6 +18,8 @@ Vim Settings
 
 3. 替换原始文件   
 ```mv vimrc ~/.vimrc```
+
+---
 
 #### vim命令模式下执行  
      
