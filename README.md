@@ -4,7 +4,7 @@ Vim Settings
 
 #### Screebshot
 
-![mac_vim](screenshot/mac_vim.png?raw=true =894x505)
+![mac_vim](screenshot/mac_vim.png?raw=true)
 
 ---
 
