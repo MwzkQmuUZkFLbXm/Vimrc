@@ -2,7 +2,7 @@ Vim Settings
 
 ---
 
-#### Screebshot
+#### screenshot
 
 <img src=http://i.imgur.com/cmtEal2.png width=890 height=500 alt="mac_vim">
 
