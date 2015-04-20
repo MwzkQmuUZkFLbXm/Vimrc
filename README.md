@@ -17,7 +17,7 @@ Vim Settings
 ```git clone https://github.com/kmlg/Vimrc.git && cd Vimrc```   
 
 3. 替换原始文件   
-```mv vimrc ~/.vimrc```
+```cp vimrc ~/.vimrc```
 
 ---
 
