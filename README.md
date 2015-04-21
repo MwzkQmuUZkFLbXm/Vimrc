@@ -3,8 +3,7 @@ Vim Settings
 ---
 
 #### screenshot
-
-<img src=http://i.imgur.com/cmtEal2.png width=890 height=500 alt="mac_vim">
+![1](https://raw.githubusercontent.com/kmlg/Vimrc/master/screen/001.png)
 
 ---
 
