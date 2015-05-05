@@ -43,6 +43,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " 标签插件
+" Ubuntu installation
+" sudo apt-get install Exuberant ctags
 Plugin 'majutsushi/tagbar'
 
 " golang
@@ -81,6 +83,10 @@ Plugin 'The-NERD-tree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" YoucompleteMe settings
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
 let tagbar_left=1
 " 设置显示／隐藏标签列表子窗口的快捷键。速记：tag list
@@ -117,7 +123,7 @@ let NERDTreeAutoDEleteBuffer=1
 "}
 
 " 基于缩进或语法进行代码折叠
-set fdm=indent
+"set fdm=indent
 " set fdm=syntax
 " 启动 vim 时关闭折叠代码
 "set nofoldenable
@@ -142,7 +148,7 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 
 "tab setting {
-set foldmethod=indent
+"set foldmethod=indent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
