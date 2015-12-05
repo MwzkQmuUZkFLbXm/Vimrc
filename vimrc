@@ -1,5 +1,7 @@
-set nocompatible              " be iMproved, required
-set laststatus=2  " Always show the statusline
+" be iMproved, required
+set nocompatible
+" always show the statusline
+set laststatus=2
 let mapleader=";"
 
 " 定义快捷键到行首和行尾 {
@@ -20,27 +22,34 @@ nmap <Leader>Q :qa!<CR>
 " 依次遍历子窗口
 nnoremap nw <C-W><C-W>
 " 跳转至右方的窗口
-map <C-H> <C-W>h<C-W>
+nnoremap <C-L> <C-W><C-L>
 " 跳转至左方的窗口
-map <C-L> <C-W>l<C-W>
+nnoremap <C-H> <C-W><C-H>
 " 跳转至上方的子窗口
-map <C-J> <C-W>j<C-W>
+nnoremap <C-K> <C-W><C-K>
 " 跳转至下方的子窗口
-map <C-K> <C-W>k<C-W>
+nnoremap <C-J> <C-W><C-J>
 " 定义快捷键在结对符之间跳转，助记pair
 nmap <Leader>pa %
 "}
 
-filetype off                  " required
+" required
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
+" solarized colorscheme
+"Plugin 'altercation/vim-colors-solarized'
+
+" markdown support
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " 标签插件
 " Ubuntu installation
@@ -58,7 +67,7 @@ Plugin 'The-NERD-Commenter'
 Plugin 'Auto-Pairs'
 
 " 神级插件，ZenCoding可以让你以一种神奇而无比爽快的感觉写HTML、CSS
-Plugin 'ZenCoding.vim'
+"Plugin 'ZenCoding.vim'
 
 " A Vim plugin for visually displaying indent levels in code
 Plugin 'Yggdroot/indentLine'
@@ -68,7 +77,7 @@ Plugin 'matchit.zip'
 
 
 " JS代码格式化插件
-Plugin '_jsbeautify'
+"Plugin '_jsbeautify'
 
 " VIM自动补全插件
 Plugin 'Valloric/YouCompleteMe'
@@ -80,12 +89,49 @@ Plugin 'vim-airline'
 "必不可少，在VIM的编辑窗口树状显示文件目录
 Plugin 'The-NERD-tree'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+" support swift
+Plugin 'toyamarinyon/vim-swift'
 
-" YoucompleteMe settings
+" all of your Plugins must be added before the following line
+" required
+call vundle#end()
+
+" maksimr/vim-jsbeautify
+" let g:editorconfig_Beautifier = $HOME/.editorconfig
+
+" yggdroot/indentLine
+let g:indentLine_color_term = 239
+let g:indentLine_char = '¦'
+
+" youcompleteMe settings {
 set completeopt-=preview
+
 let g:ycm_add_preview_to_completeopt = 0
+
+let g:ycm_filetype_whitelist = {
+            \ 'sh': 1,
+            \ 'zsh': 1,
+            \ 'python': 1,
+            \ 'javascript': 1,
+            \ 'html': 1,
+            \ 'ruby': 1,
+            \ 'go': 1,
+            \ 'css': 1,
+            \ }
+
+"let g:ycm_filetype_blacklist = {
+"      \ 'tagbar' : 1,
+"      \ 'qf' : 1,
+"      \ 'notes' : 1,
+"      \ 'markdown' : 1,
+"      \ 'unite' : 1,
+"      \ 'text' : 1,
+"      \ 'vimwiki' : 1,
+"      \ 'pandoc' : 1,
+"      \ 'infolog' : 1,
+"      \ 'mail' : 1
+"      \}
+"}
 
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
 let tagbar_left=1
@@ -97,15 +143,15 @@ let tagbar_width=32
 let g:tagbar_compact=1"
 " 设置 ctags 对哪些代码元素生成标签
 let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \'p:package',
-        \'f:function',
-        \'v:variables',
-        \'t:type',
-        \'c:const'
-    \]
-\}
+            \ 'ctagstype': 'go',
+            \ 'kinds' : [
+            \'p:package',
+            \'f:function',
+            \'v:variables',
+            \'t:type',
+            \'c:const'
+            \]
+            \}
 
 " NERD-tree settings {
 " 使用NERDTree插件查看工程文件。设置快捷键，速记:file list
@@ -126,17 +172,18 @@ let NERDTreeAutoDEleteBuffer=1
 "set fdm=indent
 " set fdm=syntax
 " 启动 vim 时关闭折叠代码
-"set nofoldenable
+set nofoldenable
 
 "启动自动补全
-filetype plugin indent on    " required
+" required
+filetype plugin indent on
 "打开语法高亮
 syntax enable
 "开启语法类型侦测
 syntax on
 " To ignore plugin indent changes, instead use:
 " 针对不同的文件类型采用不同的缩进格式
-filetype plugin on
+"filetype plugin on
 "
 " Brief help
 " :PluginList          - list configured plugins
@@ -154,9 +201,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4
 """}"
 
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gbk,gb2312,gb18030,big5,euc-jp,euc-kr,latin1
 set scrolloff=3
 set fenc=utf-8
 set autoindent
@@ -184,15 +233,25 @@ set wildmenu
 "}
 
 "Color Settings {
-set colorcolumn=85           "彩色显示第85行
-set t_Co=256                 "设置256色显示
-set background=dark          "背景
-"colorscheme molokai         "主题选择
+"彩色显示第85行
+set colorcolumn=85
+"设置256色显示
+set t_Co=256
+"背景
+set background=dark
+"主题选择
+"colorscheme molokai
 "let g:molokai_original = 1
 let g:ctags_statusline=1
-set cursorline               "设置光标高亮显示
-set cursorcolumn             "光标垂直高亮
+
+"下划线
+"set cursorline
+
+""光标垂直高亮
+set cursorcolumn
+
 set ttyfast
-set ruler                    "右下角显示光标位置的状态行
+"右下角显示光标位置的状态行
+set ruler
 set backspace=indent,eol,start
 "}
